@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>途牛网首页景点</title>
-    <meta charset="utf-8">
-    <style type="text/css">
-        *{margin: 0;padding: 0;}
-        #web{
-            width: 735px;
-            height: 350px;
-            margin:50px auto;
-            overflow: hidden;
-            position: relative;
-        }
+    <head>
+        <title>途 牛网首页景点</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+*{margin: 0;padding: 0;}
+#web{
+    width: 735px;
+    height: 350px;
+    margin:50px auto;
+    overflow: hidden;
+    position: relative;
+}
         #ul1 li{
             width: 119px;
             height: 30px;
@@ -59,59 +59,59 @@
             background:rgba(0,55,0,0.6);
             color: white;
         }
-    </style>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    
-</head>
-<body>
-    <div id="web"> 
-        <div id="prev"></div>
-        <div id="next"></div>
-        <div>
-            <ul id="ul1">
-                <li>春天赏花去</li>
-                <li>疯狂特卖</li>
-                <li>海岛错峰游</li>
-                <li>三亚超值爆款</li>
-                <li>春游要出境</li>
-                <li>日韩赏樱</li>
+        </style>
+        <script type="text/javascript" src="js/jquery.js"></script>
+
+    </head>
+    <body>
+        <div id="web"> 
+            <div id="prev"></div>
+            <div id="next"></div>
+            <div>
+                <ul id="ul1">
+                    <li>春天赏花去</li>
+                    <li>疯狂特卖</li>
+                    <li>海岛错峰游</li>
+                    <li>三亚超值爆款</li>
+                    <li>春游要出境</li>
+                    <li>日韩赏樱</li>
+                </ul>
+            </div>
+            <ul>
+                <li><img src="images/1.jpg"></li>
+                <li><img src="images/2.jpg"></li>
+                <li><img src="images/3.jpg"></li>
+                <li><img src="images/4.jpg"></li>
+                <li><img src="images/5.jpg"></li>
+                <li><img src="images/6.jpg"></li>
             </ul>
         </div>
-        <ul>
-            <li><img src="images/1.jpg"></li>
-            <li><img src="images/2.jpg"></li>
-            <li><img src="images/3.jpg"></li>
-            <li><img src="images/4.jpg"></li>
-            <li><img src="images/5.jpg"></li>
-            <li><img src="images/6.jpg"></li>
-        </ul>
-    </div>
-    <script type="text/javascript">
-        var i=0;
-        $("#web").mouseover(function() {
-          $("#web #prev").fadeIn();
-          $("#web #next").fadeIn();  
-        }).mouseout(function() {
-            $("#web #prev").fadeOut();
-            $("#web #next").fadeOut(); 
-        });
-        $("#ul1>li").mouseover(function(){
-                    $(this).addClass("background");
-                        i=$(this).index();
-                    $("#web>ul li").eq(i).show().siblings().hide();
-        }).mouseout(function(){
-            $(this).removeClass("background");
-        });
-        $("#web #prev").click(function(){
-                    i--;
-                    $("#web>ul li").eq(i).show().siblings().hide();
-                    if (i<0) {i=5;}
-                });
-                    $("#web #next").click(function(){
-                    i++;
-                    if (i>5) {i=0}
-                    $("#web>ul li").eq(i).show().siblings().hide();
-                });
-    </script>
-</body>
+        <script type="text/javascript">
+var i=0;
+$("#web").mouseover(function() {
+    $("#web #prev").fadeIn();
+    $("#web #next").fadeIn();  
+}).mouseout(function() {
+    $("#web #prev").fadeOut();
+    $("#web #next").fadeOut(); 
+});
+$("#ul1>li").mouseover(function(){
+    $(this).addClass("background");
+    i=$(this).index();
+    $("#web>ul li").eq(i).show().siblings().hide();
+}).mouseout(function(){
+    $(this).removeClass("background");
+});
+$("#web #prev").click(function(){
+    i--;
+    $("#web>ul li").eq(i).show().siblings().hide();
+    if (i<0) {i=5;}
+});
+$("#web #next").click(function(){
+    i++;
+    if (i>5) {i=0}
+    $("#web>ul li").eq(i).show().siblings().hide();
+});
+        </script>
+    </body>
 </html>
